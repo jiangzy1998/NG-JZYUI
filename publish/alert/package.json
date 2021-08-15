@@ -1,0 +1,10 @@
+{
+  "main": "../bundles/ng-jzy-lib-alert.umd.js",
+  "module": "../fesm2015/ng-jzy-lib-alert.js",
+  "es2015": "../fesm2015/ng-jzy-lib-alert.js",
+  "esm2015": "../esm2015/alert/ng-jzy-lib-alert.js",
+  "fesm2015": "../fesm2015/ng-jzy-lib-alert.js",
+  "typings": "ng-jzy-lib-alert.d.ts",
+  "sideEffects": false,
+  "name": "ng-jzy-lib/alert"
+}

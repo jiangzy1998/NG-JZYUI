@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "60b04304-3794-4736-a0df-22a6c6baede3"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -102,6 +105,37 @@
               "src/styles.less"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "ng-jzy-lib": {
+      "projectType": "library",
+      "root": "projects/ng-jzy-lib",
+      "sourceRoot": "projects/ng-jzy-lib",
+      "prefix": "jzy",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-jzy-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-jzy-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-jzy-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-jzy-lib/src/test.ts",
+            "tsConfig": "projects/ng-jzy-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-jzy-lib/karma.conf.js"
           }
         }
       }
